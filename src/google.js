@@ -4,7 +4,7 @@ require("dotenv").config();
 // mongoDB connection
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb+srv://vercel-admin-user:M4zoQK9SxvK4K6TY@cluster0.s2kgswl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+  .connect(process.env.MONGO_DB)
   .then("connedted to the server")
   .catch((err) => {
     console.log(err);
