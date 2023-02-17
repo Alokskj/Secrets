@@ -55,7 +55,7 @@ module.exports = passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/secrets",
+      callbackURL: "https://secret.alokskj.gq/auth/google/secrets",
     },
     function (accessToken, refreshToken, profile, cb) {
       user.findOrCreate({ googleId: profile.id }, function (err, user) {
